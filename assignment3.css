@@ -1,0 +1,436 @@
+body{
+    background-color: rgb(40, 40, 41);
+    overflow: visible;   
+}
+
+header{
+    height: 75px;
+    width: 1370px;
+    display: flex;
+}
+header img{
+    height: 60px;
+    width: 60px;
+    margin-left: 9rem;
+    cursor: pointer;
+}
+header ul{
+    display: flex; 
+}
+header ul li{
+    margin-left: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+header ul li a{
+    text-decoration: navy;
+    color: rgb(197, 189, 189);  
+}
+
+nav{
+    width: 95%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-right: 1rem;
+    position: absolute;
+    top: 10px;
+}
+nav ul img{
+    height: 30px;
+    width: 30px;
+    /* color: beige; */
+}
+
+.parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 6fr);
+    gap: .5rem;
+    padding: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    background-color: linear-gradient(120deg, #000000 10%, #000000 90%);
+}
+
+.building1{
+    grid-column:1 /span 1;
+    grid-row:1 /span 2;
+    background-size: contain;
+    cursor: pointer; 
+    position: relative;
+    filter: blur(5px);
+    transition: all 1s ease-in-out;
+}
+.building1:hover,
+.building1:hover h2{
+    color: rgb(249, 5, 180);
+    filter: blur(0px);
+    transition: all 1s ease-in-out;
+    position: absolute;
+    opacity: 1;
+    transition: 0.7s; 
+}
+.building1:hover h2::before,
+.building1:hover h2::after{
+    width: 165px; 
+}
+#gallery_image:hover{
+    transform: scale(1.05);
+}
+
+#gallery_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 
+        transform .5s,
+        filter .2s;   
+}
+.gallery_overlay h2{
+    position: absolute;
+    left: 225px;
+    top: 175px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0; 
+}
+.gallery_overlay h2::before,
+.gallery_overlay h2::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    margin-top: -7px;
+    margin-bottom: -7px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+.gallery_overlay h2::before{
+    top: 0;
+    left: 0
+}
+.gallery_overlay h2::after{
+    bottom: 0;
+    right: 0; 
+}
+
+
+.building2{
+    grid-column:1 /span 1;
+    grid-row: 3 /span 1;
+    background-size: cover;
+    cursor: pointer;
+    filter: blur(5px);
+    position: relative;
+}
+.building2 h2{
+    position: absolute;
+    top: 75px;
+    left: 230px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+}
+.building2:hover{
+    color: rgb(249, 5, 180);
+    filter: blur(0px);
+    transform: scale(0.95, 0.95);
+    transition: all 1s ease-in-out;
+}
+.building2:hover h2{
+    position: block;
+    opacity: 1;
+    transition: 0.7s; 
+}
+.building2:hover h2::before{
+    width: 165px; 
+}
+.building2:hover h2::after{
+    width: 165px; 
+}
+.building2 h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0px;
+    margin-top: -5px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+.building2 h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0px;
+    margin-bottom: -7px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+
+.building3{
+    grid-column:1 /span 1;
+    grid-row: 4 /span 1;
+    background-size: cover;
+    cursor: pointer;
+    filter: blur(5px);
+    position: relative;
+}
+.building3 h2{
+    position: absolute;
+    top: 75px;
+    left: 230px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+}
+.building3:hover{
+    color: rgb(249, 5, 180);
+    filter: blur(0px);
+    transform: scale(0.95, 0.95);
+    transition: all 1s ease-in-out;
+}
+.building3:hover h2{
+    position: block;
+    opacity: 1;
+    transition: 0.7s; 
+}
+.building3:hover h2::before{
+    width: 165px; 
+}
+.building3:hover h2::after{
+    width: 165px; 
+}
+.building3 h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0px;
+    margin-top: -5px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+.building3 h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0px;
+    margin-bottom: -7px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+
+.building4{
+    grid-column:2 /span 1;
+    grid-row:1 /span 1;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    filter: blur(5px);
+}
+.building4 h2{
+    position: absolute;
+    right: 225px;
+    top: 75px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+}
+.building4:hover{
+    color: rgb(249, 5, 180);
+    filter: blur(0px);
+    transform: scale(0.95, 0.95);
+    transition: all 1s ease-in-out;
+}
+.building4:hover h2{
+    position: block;
+    opacity: 1;
+    transition: 0.7s; 
+}
+.building4:hover h2::before{
+    width: 165px; 
+}
+.building4:hover h2::after{
+    width: 165px; 
+}
+.building4 h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0px;
+    margin-top: -5px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+.building4 h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0px;
+    margin-bottom: -7px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+
+
+.building5{
+    grid-column:2 /span 1;
+    grid-row:2 /span 1;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    filter: blur(5px);
+}
+.building5 h2{
+    position: absolute;
+    right: 225px;
+    top: 55px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+}
+.building5:hover{
+    color: rgb(249, 5, 180);
+    filter: blur(0px);
+    transform: scale(0.95, 0.95);
+    transition: all 1s ease-in-out;
+}
+.building5:hover h2{
+    position: block;
+    opacity: 1;
+    transition: 0.7s; 
+}
+.building5:hover h2::before{
+    width: 165px; 
+}
+.building5:hover h2::after{
+    width: 165px; 
+}
+.building5 h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0px;
+    margin-top: -5px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+.building5 h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0px;
+    margin-bottom: -7px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+
+
+.building6{
+    grid-column:2 /span 1;
+    grid-row:3 /span 2;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    filter: blur(5px);
+}
+.building6 h2{
+    position: absolute;
+    right: 225px;
+    top: 180px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+}
+.building6:hover{
+    color: rgb(249, 5, 180);
+    filter: blur(0px);
+    transform: scale(0.95, 0.95);
+    transition: all 1s ease-in-out;
+}
+.building6:hover h2{
+    position: block;
+    opacity: 1;
+    transition: 0.7s; 
+}
+.building6:hover h2::before{
+    width: 165px; 
+}
+.building6:hover h2::after{
+    width: 165px; 
+}
+.building6 h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0px;
+    margin-top: -5px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+.building6 h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0px;
+    margin-bottom: -7px;
+    background: rgb(249, 5, 180);
+    transition: 0.7s;
+}
+
+footer{
+    height: 320px;
+    width: 1500px;
+    background-color: rgb(49, 48, 48);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.picture1{
+    position: absolute;
+    top: 1030px;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+}
+    
+.fontdisplay{
+    position: relative;
+    bottom: 10px;
+    flex-direction: column;
+    font-size: 11px;
+    color: rgb(207, 207, 195);
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.handles{
+    position: absolute;
+    bottom: -545px;
+    cursor: pointer;
+    cursor: color red;
+} 
+.copyright{
+    font-size: 10px;
+    position: absolute;
+    bottom: -590px;
+    color: rgb(236, 231, 221);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
